@@ -70,11 +70,11 @@ const form = ref<{
   privacyCheck: boolean;
 }>(
   {
-    name: 'Ferdi',
-    mail: 'ferniemann@icloud.com',
+    name: '',
+    mail: '',
     phone: '',
-    message: 'Hallo Ferdi, ich habe ein tolles Projekt für dich...',
-    privacyCheck: true
+    message: '',
+    privacyCheck: false
   }
 )
 
