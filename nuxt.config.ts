@@ -9,7 +9,18 @@ export default defineNuxtConfig({
     "@nuxt/icon",
     "@nuxt/image",
     "nuxt-nodemailer",
+    "@nuxtjs/sitemap",
   ],
+
+  runtimeConfig: {
+    public: {
+      sitemap: {
+        hostname: "https://ferdi.digital",
+        gzip: true,
+        routes: ["/", "/work", "/contact", "/skills", "/imprint", "/privacy"],
+      },
+    },
+  },
 
   css: ["@/assets/styles/main.css"],
 
