@@ -20,6 +20,50 @@
 </template>
 
 <script setup>
+useHead({
+  title: 'Ferdinand Niemann, Lübeck',
+  htmlAttrs: {
+    lang: 'en',
+  },
+  meta: [
+    {
+      name: 'description',
+      content: 'I am Ferdinand Niemann, a passionate developer from Lübeck, specializing in modern web applications and innovative app solutions.'
+    }
+  ],
+  script: [
+    {
+      type: 'application/ld+json',
+      children: `{
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Ferdinand Niemann",
+        "url": "https://ferdi.digital",
+        "sameAs": [
+          "https://www.linkedin.com/in/fniem",
+          "https://github.com/fniem" 
+        ],
+        "jobTitle": "Full-Stack Developer",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Remind GmbH",
+          "url": "https://remind.de"
+        },
+        "email": "mailto:moin@ferdi.digital",
+        "image": "https://ferdi.digital/images/profile.jpg",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Lübeck",
+          "addressCountry": "DE"
+        },
+        "telephone": "+49 173 683 4611",
+        "description": "I am Ferdinand Niemann, a passionate developer from Lübeck, specializing in modern web applications and innovative app solutions.",
+        "knowsAbout": "Web Development, Full-Stack Development, Nuxt.js, TypeScript, TailwindCSS, DevOps",        
+      }`
+    }
+  ]
+})
+
 const navOpen = useState('nav')
 </script>
 

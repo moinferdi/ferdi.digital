@@ -62,6 +62,32 @@ interface ContactResponse {
   error?: string;
 }
 
+useHead({
+  title: 'Contact Me - Ferdinand Niemann',
+  meta: [
+    {
+      name: 'description',
+      content: 'Get in touch with Ferdinand Niemann for web development or app projects, collaborations, or inquiries.'
+    }
+  ],
+  script: [
+    {
+      type: 'application/ld+json',
+      innerHTML: JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "ContactPage",
+        "mainEntity": {
+          "@type": "Person",
+          "name": "Ferdinand Niemann",
+          "email": "mailto:moin@ferdi.digital",
+          "telephone": "+49 173 683 4611",
+          "url": "https://ferdi.digital/contact"
+        }
+      })
+    }
+  ]
+})
+
 const form = ref<{
   name: string;
   mail: string;

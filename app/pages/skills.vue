@@ -28,6 +28,16 @@
 </template>
 
 <script setup lang="ts">
+useHead({
+  title: 'My Skills & Tech Stack - Ferdinand Niemann',
+  meta: [
+    {
+      name: 'description',
+      content: 'Discover the diverse skill set and tech stack of Ferdinand Niemann, a full-stack developer specializing in modern web applications and innovative app solutions.'
+    }
+  ]
+})
+
 const skills = [
   {
     title: "Frontend",

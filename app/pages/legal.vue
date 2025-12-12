@@ -56,3 +56,14 @@
     </div>
   </section-wrapper>
 </template>
+<script setup>
+useHead({
+  title: 'Legal Notice / Impressum - Ferdinand Niemann',
+  meta: [
+    {
+      name: 'description',
+      content: 'Legal notice and impressum of Ferdinand Niemann, developer portfolio. Contact information and legal disclaimers.'
+    }
+  ]
+})
+</script>

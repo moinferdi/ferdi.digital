@@ -204,3 +204,15 @@
     </div>
   </section-wrapper>
 </template>
+
+<script setup lang="ts">
+useHead({
+  title: 'Privacy Notice / Datenschutzerklärung - Ferdinand Niemann',
+  meta: [
+    {
+      name: 'description',
+      content: 'Read the comprehensive Privacy Notice / Datenschutzerklärung of Ferdinand Niemann, outlining data protection practices and user rights.'
+    }
+  ]
+})
+</script>
