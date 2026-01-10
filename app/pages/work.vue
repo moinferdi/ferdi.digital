@@ -8,7 +8,7 @@
     <div v-for="(project, index) in projectsData" :key="project.title" class="project-wrapper"
       :class="{ 'last-el': index === projectsData.length - 1 }">
       <div class="project-wrapper__screenshots">
-        <nuxt-img :src="project.images[project.imgIndex]" />
+        <nuxt-img :src="project.images[project.imgIndex]" format="webp" />
         <div class="img-controls">
           <button class="img-control right" @click="getElement(index)">
             <icon name="mi:chevron-right" />

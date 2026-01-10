@@ -2,7 +2,7 @@
   <div id="home">
     <div class="hero-wrapper">
       <div class="hero container">
-        <nuxt-img src="/images/profile.jpg" />
+        <nuxt-img src="/images/profile.jpg" format="webp" />
         <h2>Moin! I'm a developer and I <span> center divs with ease</span>.</h2>
         <div class="cta-wrapper">
           <link-cta to="#facts" label="Find out more" />
