@@ -1,7 +1,7 @@
 <template>
-  <h3>
+  <h2>
     {{ title }}
-  </h3>
+  </h2>
   <div :id="id" class="section-wrapper">
     <div class="container section">
       <!-- eslint-disable-next-line vue/html-self-closing -->
@@ -18,7 +18,7 @@ defineProps<{
 </script>
 
 <style>
-h3 {
+h2 {
   font-size: var(--size-txt-xl);
   font-style: italic;
   color: var(--clr-blue-300);
