@@ -22,7 +22,7 @@
         <div class="label-wrapper">
           <label for="name">Your name</label>
           <input id="name" v-model="form.name" type="text" name="name" required>
-          <input id="last-name" v-model="form.honeypot" type="text" name="last-name">
+          <input id="last-name" v-model="form.honeypot" type="text" name="last-name" autocomplete="off" tabindex="-1">
         </div>
         <div class="label-wrapper">
           <label for="mail">Your email address</label>
@@ -103,7 +103,7 @@ const form = ref<{
     phone: '',
     message: '',
     privacyCheck: false,
-    honeypot: ''
+    honeypot: ' '
   }
 )
 
