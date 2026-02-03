@@ -12,9 +12,9 @@
             <icon name="mi:email" />
             <span>moin@ferdi.digital</span>
           </a>
-          <a href="https://linkedin.com/in/fniem" target="_blank" class="contact-option">
+          <a href="https://linkedin.com/in/moinferdi" target="_blank" class="contact-option">
             <icon name="ri:linkedin-fill" />
-            <span>linkedin.com/in/fniem</span>
+            <span>linkedin.com/in/moinferdi</span>
           </a>
         </div>
       </div>
@@ -22,6 +22,7 @@
         <div class="label-wrapper">
           <label for="name">Your name</label>
           <input id="name" v-model="form.name" type="text" name="name" required>
+          <input id="last-name" v-model="form.honeypot" type="text" name="last-name">
         </div>
         <div class="label-wrapper">
           <label for="mail">Your email address</label>
@@ -94,13 +95,15 @@ const form = ref<{
   phone: string;
   message: string;
   privacyCheck: boolean;
+  honeypot: string;
 }>(
   {
     name: '',
     mail: '',
     phone: '',
     message: '',
-    privacyCheck: false
+    privacyCheck: false,
+    honeypot: ''
   }
 )
 
@@ -126,7 +129,8 @@ async function sendMail() {
         mail: '',
         phone: '',
         message: '',
-        privacyCheck: false
+        privacyCheck: false,
+        honeypot: form.value.honeypot
       };
 
       setTimeout(() => {
@@ -216,6 +220,7 @@ async function sendMail() {
       }
 
       #name,
+      #last-name,
       #mail,
       #phone,
       #message {
@@ -237,6 +242,12 @@ async function sendMail() {
         }
       }
 
+    }
+
+    #last-name {
+      position: absolute;
+      left: -9999px;
+      top: -9999px;
     }
 
     .privacy-wrapper {

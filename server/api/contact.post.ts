@@ -4,6 +4,7 @@ interface ContactForm {
   phone: string;
   message: string;
   privacyCheck: boolean;
+  honeypot: string;
 }
 
 export default defineEventHandler(async (event) => {
@@ -19,7 +20,17 @@ export default defineEventHandler(async (event) => {
           statusCode: 400,
           statusMessage:
             "Missing required fields: name, mail and message are required and you need to accept the privacy notice.",
-        })
+        }),
+      );
+    }
+
+    if (body.honeypot && body.honeypot.trim() !== "") {
+      return sendError(
+        event,
+        createError({
+          statusCode: 400,
+          statusMessage: "Contact form could not be sent.",
+        }),
       );
     }
 
@@ -31,7 +42,7 @@ export default defineEventHandler(async (event) => {
         <p><strong>Name:</strong> ${escapeHtml(body.name)}</p>
         <p><strong>Email:</strong> ${escapeHtml(body.mail)}</p>
         <p><strong>Phone:</strong> ${escapeHtml(
-          body.phone || "Not provided"
+          body.phone || "Not provided",
         )}</p>
         <p><strong>Message:</strong></p>
         <p>${escapeHtml(body.message).replace(/\n/g, "<br>")}</p>
@@ -50,7 +61,7 @@ export default defineEventHandler(async (event) => {
       createError({
         statusCode: 500,
         statusMessage: "Failed to send email. Please try again later.",
-      })
+      }),
     );
   }
 });
