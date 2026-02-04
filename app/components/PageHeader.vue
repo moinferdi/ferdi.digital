@@ -6,12 +6,12 @@
       </nuxt-link>
     </h1>
     <div class="buttons-wrapper">
-      <a href="https://github.com/fniem" target="_blank" class="btn social" :class="{ 'social-toggled': navOpen }">
+      <a href="https://github.com/moinferdi" target="_blank" class="btn social" :class="{ 'social-toggled': navOpen }">
         <span>
           <icon name="ri:github-line" />
         </span>
       </a>
-      <a href="https://github.com/fniem" target="_blank" class="btn social" :class="{ 'social-toggled': navOpen }">
+      <a href="https://linkedin.com/in/moinferdi" target="_blank" class="btn social" :class="{ 'social-toggled': navOpen }">
         <span>
           <icon name="ri:linkedin-line" />
         </span>
